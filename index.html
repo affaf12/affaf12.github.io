@@ -21,16 +21,18 @@
   <meta name="geo.placename" content="Karachi">
   <meta name="distribution" content="global">
 
-  <!-- Preconnect for faster Google Fonts loading -->
+  <!-- Preconnect for faster loading -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- 🌟 FIX: Preload LCP Image (Hero Profile Pic) 🌟 -->
+  <link rel="preload" as="image" href="images/profile-pic.webp" fetchpriority="high">
 
   <!-- Favicon -->
   <link rel="shortcut icon" type="image/png" href="images/A_Letter_Logo__creative_A_letter_with_gradient__1_-removebg-preview%20(2).png">
 
   <link rel="alternate" href="https://affaf12.github.io/" hreflang="en-pk" />
   <link rel="alternate" href="https://affaf12.github.io/" hreflang="x-default" />
-
   <link rel="canonical" href="https://affaf12.github.io/">
 
   <!-- Open Graph / Facebook -->
@@ -184,7 +186,8 @@
       <div class="profile-pic-wrapper">
         <picture>
           <source srcset="images/profile-pic.webp" type="image/webp">
-          <img src="images/profile-pic.jpeg" alt="Muhammad Affaf — Founder of NextGen Analytics, Power BI Developer and Data Analytics Expert in Karachi Pakistan" class="profile-pic" width="720" height="721" loading="eager">
+          <!-- 🌟 FIX: Added fetchpriority="high" for LCP 🌟 -->
+          <img src="images/profile-pic.jpeg" alt="Muhammad Affaf — Founder of NextGen Analytics, Power BI Developer and Data Analytics Expert in Karachi Pakistan" class="profile-pic" width="720" height="721" loading="eager" fetchpriority="high">
         </picture>
         <div class="glow-ring"></div>
       </div>
@@ -268,7 +271,7 @@
       <h3>Freelance Projects</h3>
       <p><strong>Power BI &amp; Data Analytics Projects</strong><br>
         ● Delivered dashboards and reporting solutions for multiple clients.<br>
-        ● Developed interactive visualizations to support strategic decisions.<br>
+        ● Developed interactive visualizations to support strategic decisions.<br />
         ● Implemented ETL pipelines and data modeling for business insights.
       </p>
       <div class="card-particles"></div>
